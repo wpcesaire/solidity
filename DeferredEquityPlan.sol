@@ -26,17 +26,7 @@ contract DeferredEquityPlan {
         require(msg.sender == human_resources || msg.sender == employee, "You are not authorized to execute this contract.");
         require(active == true, "Contract not active.");
 
-        // @TODO: Add "require" statements to enforce that:
-        // 1: `unlock_time` is less than or equal to `now`
-        // 2: `distributed_shares` is less than the `total_shares`
-        // Your code here!
-
-        // @TODO: Add 365 days to the `unlock_time`
-        // Your code here!
-
-        // @TODO: Calculate the shares distributed by using the function (now - start_time) / 365 days * the annual distribution
-        // Make sure to include the parenthesis around (now - start_time) to get accurate results!
-        // Your code here!
+       
 
         // double check in case the employee does not cash out until after 5+ years
         if (distributed_shares > 1000) {
