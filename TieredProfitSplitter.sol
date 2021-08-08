@@ -12,25 +12,25 @@ contract TieredProfitSplitter {
         employee_three = _three;
     }
 
-    // Should always return 0! Use this to test your `deposit` function's logic
+    // Should always return 0!testing `deposit` function's logic
     function balance() public view returns(uint) {
         return address(this).balance;
     }
 
     function deposit() public payable {
-        uint points = msg.value / 100; // Calculates rudimentary percentage by dividing msg.value into 100 units
+        uint points = msg.value / 100; // Calculated rudimentary percentage by dividing msg.value into 100 units
         uint total;
         uint amount;
 
-        // @TODO: Calculate and transfer the distribution percentage
-        // Step 1: Set amount to equal `points` * the number of percentage points for this employee
-        // Step 2: Add the `amount` to `total` to keep a running total
-        // Step 3: Transfer the `amount` to the employee
+        //  Calculated and transferred the distribution percentage
+        // Set amount to equal `points` * the number of percentage points for this employee
+        // Added the `amount` to `total` to keep a running total
+        // Transferred the `amount` to the employee
        amount = points * 60;
        total += amount;
        employee_one.transfer(amount);
 
-          // @TODO: Repeat the previous steps for `employee_two` and `employee_three`
+          // Repeated the previous steps for `employee_two` and `employee_three`
   
        amount = points * 25;
        total += amount;
